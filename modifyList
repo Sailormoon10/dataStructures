@@ -1,0 +1,36 @@
+# Creating an array of 8 lists called records_1
+records_1 = [
+    ["John", "enter"],
+    ["Alice", "exit"],
+    ["Alice", "exit"],
+    ["Bob", "enter"],
+    ["Bob", "enter"],
+    ["Eva", "exit"],
+    ["Mike", "enter"],
+    ["Sophia", "exit"],
+    ["Daniel", "enter"],
+    ["Olivia", "exit"],
+    ["Hannon", "exit"],
+    ["Olivia", "exit"],
+    ["Mike", "enter"],
+    ["Sophia", "exit"],
+]
+
+#Create a new list.
+newlist = []
+
+# Add the records that have enter at index 1 to newList
+newlist = [record[0] for index, record in enumerate(records_1) if record[1] == 'exit']
+print(newlist)
+
+''' Output: 
+
+['Alice',
+'Alice', 
+'Eva',
+'Sophia', 
+'Olivia',
+'Hannon', 
+'Olivia', 
+'Sophia']
+'''
