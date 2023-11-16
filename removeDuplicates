@@ -1,0 +1,25 @@
+records_1 = [
+    ["John", "enter"],
+    ["Alice", "exit"],
+    ["Alice", "exit"],
+    ["Bob", "enter"],
+    ["Bob", "enter"],
+    ["Eva", "exit"],
+    ["Mike", "enter"],
+    ["Sophia", "exit"],
+    ["Daniel", "enter"],
+    ["Olivia", "exit"],
+    ["Hannon", "exit"],
+    ["Olivia", "exit"],
+    ["Mike", "enter"],
+    ["Sophia", "exit"],
+]
+
+
+# Now add all the names with 'enter' to a list ensuring there are no duplicates names.
+unique_names = set()
+for entry in records_1:
+    if entry[1] == "enter":
+        unique_names.add(entry[0])
+
+print(unique_names)
