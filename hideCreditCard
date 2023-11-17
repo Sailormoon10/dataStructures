@@ -1,0 +1,23 @@
+# Create a function that hides the last 4 digits of a number.
+
+# Overview: pass 1 argument to the function that will be a number in string format
+# initialize an empty string 
+# we want to iterate through each digit and the index, so the enumerate function is used. This will allow us to find the last 4 digits of a number.
+# Now compare the index with the length of the number minus 4. If the index is greater than the 4th to the last digit, 
+# it is part of the last 4 digits so hide it with an asterisk and add it to the hidden variable.
+# If the index is not greater it is not part of the last 4 digits so we add the digit to the hidden variable.
+
+
+def hideCreditCard(card):
+    hidden = ''
+    for index, digit in enumerate(card):
+        if index >= len(card) - 4:
+            hidden += '*'
+        else:
+            hidden += digit
+    return hidden
+
+
+print(hideCreditCard('1234567890'))
+print(hideCreditCard('9999999'))
+print(hideCreditCard('5555555555512'))
